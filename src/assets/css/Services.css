@@ -1,0 +1,110 @@
+/* =====================
+   Services Section
+===================== */
+.services {
+  background: var(--secondary);
+  padding: 5rem 1.5rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-align: center;
+  position: relative;
+  color: var(--primary);
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--accent);
+}
+
+/* Grid layout for services */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual service cards */
+.service-card {
+  background: var(--white);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Service icon */
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+/* Service title */
+.service-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  text-align: center;
+  color: var(--primary);
+}
+
+/* Service description */
+.service-desc {
+  font-size: 1rem;
+  color: var(--text-light);
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  .service-card {
+    padding: 1.5rem;
+  }
+  .service-icon {
+    font-size: 2.5rem;
+  }
+  .service-title {
+    font-size: 1.25rem;
+  }
+  .service-desc {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

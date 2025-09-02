@@ -1,0 +1,87 @@
+/* =====================
+   Contact Section
+===================== */
+.contact {
+  background: var(--secondary);
+  padding: 5rem 1.5rem;
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  width: 100%;
+}
+
+.form-input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--secondary);
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.form-input:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+textarea.form-input {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  background: var(--primary);
+  color: var(--white);
+  border-radius: 2rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+/* Contact Form Status Messages */
+.form-status {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.form-status.success {
+  background-color: #38a169; /* green */
+  color: white;
+}
+
+.form-status.error {
+  background-color: #e53e3e; /* red */
+  color: white;
+}
+
+
+.btn:hover {
+  background: var(--accent);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact {
+    padding: 3rem 1rem;
+  }
+
+  .contact-form {
+    gap: 1rem;
+  }
+}
